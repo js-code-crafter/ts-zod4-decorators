@@ -1,0 +1,40 @@
+{
+	"name": "ts-zod4-decorators",
+	"version": "1.0.0",
+	"author": "Ehsan Afzali, based on Jordi Bermejo's ts-zod-decorators package",
+	"main": "dist/index.js",
+	"types": "src/index.ts",
+	"license": "ISC",
+	"scripts": {
+		"test": "yarn mocha",
+		"type:check": "yarn tsc --noEmit",
+		"build": "yarn tsc --build",
+		"prepare": "yarn husky install",
+		"prepack": "yarn test:coverage && yarn build",
+		"postpack": "yarn tsc --build --clean",
+		"test:coverage": "nyc mocha"
+	},
+	"devDependencies": {
+		"@types/eslint": "^9.6.1",
+		"@types/mocha": "^10.0.10",
+		"@types/node": "^24.9.1",
+		"@typescript-eslint/eslint-plugin": "^8.46.2",
+		"@typescript-eslint/parser": "^8.46.2",
+		"eslint": "^9.38.0",
+		"eslint-config-prettier": "^10.1.8",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.2.5",
+		"mocha": "^11.7.4",
+		"mocha-minimalist-reporter": "^1.1.0",
+		"nyc": "^17.1.0",
+		"prettier": "^3.6.2",
+		"source-map-support": "^0.5.21",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.9.3",
+		"yarn-upgrade-all": "^0.7.5"
+	},
+	"dependencies": {
+		"zod": "^4.1.12"
+	},
+	"packageManager": "yarn@4.10.3"
+}
